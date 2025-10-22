@@ -41,7 +41,6 @@ void loop() {
     return;
   }
 
-  // --- LEFT STICK DIR HANDLING ---
   int x = ps5.LStickX(); // -128 to 127
   int y = ps5.LStickY(); // -128 to 127
 
@@ -57,19 +56,16 @@ void loop() {
   if (x < -DEADZONE) digitalWrite(BLUE_PIN, HIGH);       // left
   else if (x > DEADZONE) digitalWrite(YELLOW_PIN, HIGH); // right
 
-  // --- DPAD MAPPING ---
   if (ps5.Up()) digitalWrite(RED_PIN, HIGH);
   if (ps5.Down()) digitalWrite(ORANGE_PIN, HIGH);
   if (ps5.Left()) digitalWrite(BLUE_PIN, HIGH);
   if (ps5.Right()) digitalWrite(YELLOW_PIN, HIGH);
 
-  // --- FACE BUTTONS ---
   if (ps5.Square()) Serial.println("Square pressed");
   if (ps5.Cross())  Serial.println("Cross pressed");
   if (ps5.Circle()) Serial.println("Circle pressed");
   if (ps5.Triangle()) Serial.println("Triangle pressed");
 
-  // --- L1R1L2R2 BUTTONS ---
   if (ps5.L1()) Serial.println("L1 pressed");
   if (ps5.R1()) Serial.println("R1 pressed");
 
