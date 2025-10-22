@@ -1,2 +1,2 @@
 # 2025Robot
-This is the repo for our robot's code for the 2025 robotics club competition.
+Our team's robots' code for the 2025 CHS Robotics club competition.
